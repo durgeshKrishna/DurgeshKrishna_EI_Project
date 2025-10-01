@@ -166,3 +166,108 @@ TeaDecorator: The abstract decorator.
 MasalaTeaDecorator, GingerTeaDecorator, CardamomTeaDecorator: Concrete decorator classes.
 
 DecoratorPattern: The main class that shows how a simple tea can be decorated with multiple additions.
+
+
+🏠 Smart Home System
+Use Case Overview
+The Smart Home System is a console-based application designed to simulate the backend of a smart home environment. It allows users to manage and control various smart devices (lights, door locks, thermostats) through a central hub. The system supports scheduling device operations, automating tasks with triggers, grouping devices for simultaneous control, and viewing system logs.
+
+Functionalities
+Device Management: Add, remove, and control individual smart devices.
+
+Scheduling: Set commands for devices to execute at a specified time.
+
+Automation: Create triggers that perform an action when a condition is met.
+
+Group Control: Create groups of devices to turn them all on or off with a single command.
+
+Status Reporting: View the current status of all connected devices.
+
+System Logging: View a log of all actions performed in the system.
+
+🧩 Design Patterns Used
+1. Factory Method Pattern
+Purpose: To create instances of various device types without exposing the instantiation logic to the client. This pattern provides an interface for creating objects in a superclass but allows subclasses to alter the type of objects that will be created.
+
+Relation to Use Case: The SmartHomeHub uses the DeviceFactory to dynamically create Light, DoorLock, or Thermostat objects based on user input, which decouples the hub from concrete device classes.
+
+Classes Involved: DeviceFactory, Device, Light, DoorLock, Thermostat.
+
+2. Proxy Pattern
+Purpose: To provide a surrogate or placeholder for another object to control access to it. The proxy wraps the real object and can add functionality like logging, access control, or lazy loading.
+
+Relation to Use Case: Every device added to the SmartHomeHub is wrapped in a DeviceProxy. This controls access to the real device and can be extended to add features like permission checks without modifying the device's code.
+
+Classes Involved: DeviceProxy, Device.
+
+3. Observer Pattern
+Purpose: To define a subscription mechanism to notify multiple objects about any events that happen to the object they are observing.
+
+Relation to Use Case: The structure is in place for devices to be updated on system changes. Each Device implements the DeviceObserver interface, allowing it to receive updates and react accordingly, such as the Thermostat checking its temperature.
+
+Classes Involved: DeviceObserver, Device.
+
+4. Command Pattern (Implicit)
+Purpose: Encapsulates a request as an object, thereby letting you parameterize clients with different requests, queue or log requests, and support undoable operations.
+
+Relation to Use Case: Schedule and Trigger objects encapsulate a request (e.g., "turn on device 1") and its context (time or condition). The SmartHomeHub stores and manages these command objects, decoupling the request from the immediate execution logic.
+
+Classes Involved: Schedule, Trigger, SmartHomeHub.
+
+🗂️ Classes and Their Responsibilities
+Device.java: Abstract base class defining common properties and methods for all devices; also implements the DeviceObserver interface.
+
+Light.java: Concrete implementation of Device for light devices.
+
+Thermostat.java: Concrete implementation of Device for thermostat devices.
+
+DoorLock.java: Concrete implementation of Device for door lock devices.
+
+DeviceFactory.java: Factory class for creating various device instances based on type.
+
+DeviceProxy.java: Proxy class that wraps around real devices to control access.
+
+DeviceObserver.java: The observer interface for device status updates.
+
+SmartHomeHub.java: The central hub for managing all devices, schedules, triggers, and groups.
+
+Schedule.java: Represents scheduling information for a device command.
+
+Trigger.java: Represents a trigger that automates a device action based on a condition.
+
+DeviceGroup.java: Represents a collection of devices that can be controlled together.
+
+Main.java: The entry point of the application for handling all user interaction.
+
+🛠️ Compiling and Executing
+To compile and execute the project, navigate to the root directory (EXERCISE_2/Smart Home System/) and use the following commands.
+
+Compile all source files:
+
+Bash
+
+javac */*.java *.java
+Run the application:
+
+Bash
+
+java Main
+🛠️ Tech Stack
+Programming Language
+Java: The primary language used for implementing the Smart Home System. Java's object-oriented principles and robust ecosystem perfectly support the design patterns and architecture used in this project.
+
+JDK Version
+JDK 17: The project is developed and tested using Java Development Kit (JDK) version 17, which provides a stable and feature-rich environment.
+
+Build and Execution
+Java Compiler (javac): Used to compile the Java source code into bytecode.
+
+Java Runtime (java): Executes the compiled Java bytecode to run the application.
+
+Version Control
+Git: Used for version control, allowing for tracking changes and managing the codebase.
+
+📞 Contact Information
+Gmail: durgeshkrishna615@gmail.com
+
+GitHub: durgeshKrishna
