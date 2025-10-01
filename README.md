@@ -167,7 +167,7 @@ Open a terminal in the project directory (`EXERCISE_2/Smart Home System/`) and e
 
 ```bash
 // Compile all .java files
-javac */*.java *.java
+javac *.java
 
 // Run the application
 java Main
