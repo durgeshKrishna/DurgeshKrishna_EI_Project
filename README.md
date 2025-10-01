@@ -108,6 +108,7 @@ This is a Java-based console application that simulates the backend of a smart h
 * **System Logging:** View a comprehensive log of all actions performed in the system.
 
 ## Technical Design
+![IMG-20251001-WA0014](https://github.com/user-attachments/assets/528d35fd-5118-4a3c-8f42-fc486ef90417)
 
 ### Design Patterns Used
 
