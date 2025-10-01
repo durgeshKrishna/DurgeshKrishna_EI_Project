@@ -173,47 +173,6 @@ javac *.java
 java Main
 ```
 
-## Usage Guide
-
-The application provides an interactive menu-driven interface. Below are the main menu options:
-
-#### 1) Add Device
-Add a new smart device to the system by specifying its type (Light, DoorLock, Thermostat) and unique ID.
-
-#### 2) Remove Device
-Remove an existing device from the system using its device ID.
-
-#### 3) Turn Device On/Off
-Control individual devices by turning them on or off using their device ID.
-
-#### 4) Schedule Device Command
-Schedule a device to turn on or off at a specific time.
-
-#### 5) Create Trigger
-Set up automation rules that trigger device actions based on conditions.
-
-#### 6) Create Device Group
-Group multiple devices together for simultaneous control.
-
-#### 7) Control Device Group
-Turn all devices in a group on or off with a single command.
-
-#### 8) View Device Status
-Display the current status of all connected devices.
-
-#### 9) View System Logs
-Show a comprehensive log of all system activities and commands executed.
-
-#### 10) Exit
-Exit the application.
-
-## Tech Stack
-
-* **Programming Language:** Java 17
-* **Design Approach:** Object-Oriented Programming with Design Patterns
-* **Build Tool:** Java Compiler (javac)
-* **Version Control:** Git
-
 ## Compilation Commands for Other Patterns
 
 ### Behavioral Patterns
@@ -248,6 +207,13 @@ java AdapterPattern
 javac DecoratorPattern.java
 java DecoratorPattern
 ```
+
+## Tech Stack
+
+* **Programming Language:** Java 17
+* **Design Approach:** Object-Oriented Programming with Design Patterns
+* **Build Tool:** Java Compiler (javac)
+* **Version Control:** Git
 
 ## Contact
 
